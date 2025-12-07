@@ -1,4 +1,4 @@
-<%= form_with(model: idea) do |form| %>
+<%= form_with(model: idea, html: {multipart: true}) do |form| %>
   <% if idea.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
@@ -23,7 +23,7 @@
 
   <div>
     <%= form.label :picture, style: "display: block" %>
-    <%= form.text_field :picture %>
+    <%= form.file_field :picture %>
   </div>
 
   <div>
