@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/about'
+  root "pages#homepage"
   resources :ideas
-  root "hello#index"
+  # root "hello#index"
 end
